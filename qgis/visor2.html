@@ -11,8 +11,8 @@
         <link rel="stylesheet" href="css/leaflet-measure.css">
         <style>
         #map {
-            width: 991px;
-            height: 501px;
+            width: 1200px;
+            height: 450px;
         }
         </style>
         <title></title>
@@ -282,6 +282,7 @@
         var baseMaps = {};
         L.control.layers(baseMaps,{'Lugar de interés cultural<br /><table><tr><td style="text-align: center;"><img src="legend/Lugardeinterscultural_2_EspaciomarinodeCaboRoig0.png" /></td><td>Espacio marino de Cabo Roig</td></tr><tr><td style="text-align: center;"><img src="legend/Lugardeinterscultural_2_EspaciosAbiertoseIslasdelMarMenor1.png" /></td><td>Espacios Abiertos e Islas del Mar Menor</td></tr><tr><td style="text-align: center;"><img src="legend/Lugardeinterscultural_2_FranjalitoralsumergidadelaRegióndeMurcia2.png" /></td><td>Franja litoral sumergida de la Región de Murcia</td></tr><tr><td style="text-align: center;"><img src="legend/Lugardeinterscultural_2_IslaseIslotesdelLitoralMediterráneo3.png" /></td><td>Islas e Islotes del Litoral Mediterráneo</td></tr><tr><td style="text-align: center;"><img src="legend/Lugardeinterscultural_2_MarMenor4.png" /></td><td>Mar Menor</td></tr><tr><td style="text-align: center;"><img src="legend/Lugardeinterscultural_2_SalinasyArenalesdeSanPedrodelPinatar5.png" /></td><td>Salinas y Arenales de San Pedro del Pinatar</td></tr><tr><td style="text-align: center;"><img src="legend/Lugardeinterscultural_2_VallessubmarinosdelEscarpedeMazarrón6.png" /></td><td>Valles submarinos del Escarpe de Mazarrón</td></tr><tr><td style="text-align: center;"><img src="legend/Lugardeinterscultural_2_7.png" /></td><td></td></tr></table>': layer_Lugardeinterscultural_2,'<img src="legend/AreaEstudio_1.png" /> Area Estudio': layer_AreaEstudio_1,"OpenStreetMap": layer_OpenStreetMap_0,}).addTo(map);
         setBounds();
+        L.control.scale().addTo(map); //Añadir barra de escala al mapa
         </script>
     </body>
 </html>
