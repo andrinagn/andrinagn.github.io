@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+    <!--Visor sencillo Andrina Gimcheva Norcheva-->
 
 <!--    
     CÓDIGO EJEMPLO para sidebar-v2 
@@ -34,8 +35,9 @@
     <!-- JS de sidebar-v2 -->
     <script src="https://turbo87.github.io/sidebar-v2//js/leaflet-sidebar.js"></script>
 
-
-    <style>
+    <!--Estilo del cuerpo-->
+    <style> 
+    
         body {
             padding: 0;
             margin: 0;
@@ -84,20 +86,20 @@
             
             <div class="sidebar-pane" id="intro">
                 <h1 class="sidebar-header">
-                    Localizador
+                    Localizador <!--Barra desplegable, primera categoría-->
                     <span class="sidebar-close"><i class="fa fa-caret-left"></i></span>
                 </h1>
-                <p class="lorem">Visor sencillo</p>
+                <p class="lorem">Visor sencillo</p> <!--Título del visor-->
             </div>
-
+                                    <!--Segunda categoría desplegable-->
             <div class="sidebar-pane" id="home">
                 <h1 class="sidebar-header">Información<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
                 <p>Universidad Nacional de Córdoba</p>
                 <p class="lorem">Dirección:Avenida Haya de la Torre , Córdoba, Argentina</p>
-                <img src="http://www.exactas.unlp.edu.ar/uploads/assets/logo_unc_small.jpg" alt="logo unizar">
+                <img src="http://www.exactas.unlp.edu.ar/uploads/assets/logo_unc_small.jpg" alt="logo unizar"><!--Llamada a un recurso de imagen-->
             </div>
 
-            <div class="sidebar-pane" id="profile">
+            <div class="sidebar-pane" id="profile">  <!--Tercera categoría-->
                 <h1 class="sidebar-header">Autor<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
                 <p>Andrina Gincheva Norcheva</p>
             </div>
@@ -105,27 +107,27 @@
             <div class="sidebar-pane" id="settings">
                 <h1 class="sidebar-header">Settings<span class="sidebar-close"> <!-- Título de la sección --><i class="fa fa-caret-left"></i></span></h1><!-- Botón o flecha para volver al menú principal -->
                 <p>Mapa creado a partir de Leaflet y OpenStreetMap</p>
-                <p class="estilo">Cualquier problema contacte con el autor</p>
+                <p class="estilo">Cualquier problema contacte con el autor</p> <!--Derechos de autor-->
             </div>
         </div>
     </div>
 
-    <!-- bloque del mapa -->
+    <!--Creación del bloque del mapa -->
     <div id="map" class="sidebar-map"></div>
 
 
     <script>
         var map = L.map('map');
-        map.setView([-31.4390, -64.1886], 8);
+        map.setView([-31.4390, -64.1886], 8); //Coordenadas de localización cuando se cargue el mapa
 
         
         L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 18,
-            attribution: 'Map data &copy; OpenStreetMap contributors'
+            attribution: 'Map data &copy; OpenStreetMap contributors' //Mapa base
         }).addTo(map);
         
 
-        var marker = L.marker([-31.4390, -64.1886]).addTo(map);
+        var marker = L.marker([-31.4390, -64.1886]).addTo(map); //Coordenadas del localizador
 
         var sidebar = L.control.sidebar('sidebar').addTo(map);
         L.control.scale().addTo(map); //Añadir barra de escala al mapa
